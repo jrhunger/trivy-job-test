@@ -7,7 +7,7 @@ Issue ref: [509](https://github.com/aquasecurity/trivy-operator/issues/509)
 * Make sure trivy is installed and working
 
 ## Tuning
-* May need to edit test.sh and change WAITMAX to a higher number if your cluster is slow creating the vulnerabiltyreports.
+* May need to edit test.sh and change WAITMAX to a higher number if your cluster is slow creating the vulnerabilityreports.
 
 ## Expected output:
 ```console
