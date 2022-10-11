@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: job5
+spec:
+  schedule: "* * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: job5
+            image: alpine:3.15.5
+            imagePullPolicy: IfNotPresent
+            command:
+            - /bin/sh
+            - -c
+            - date; echo hello from job5
+            securityContext:
+              runAsUser: 1000
+              runAsGroup: 1000
+          restartPolicy: OnFailure
